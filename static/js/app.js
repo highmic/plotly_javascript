@@ -134,7 +134,7 @@ function buildPlots(testID) {
       width: 1100,
       autochange: true,
       margin: {
-        l: 500,
+        l: 580,
         r: 0,
         b: 70,
         t: 70,
@@ -156,13 +156,17 @@ function optionChanged(testID) {
 }
 //END Optionn changed function 
 
-//START page initialization function to specfic test subject ID 940
+//START page initialization function to specfic test subject ID at index 0, id 940
 function init() {
-  metaInfo(940)
-  buildPlots(940)
-
+  d3.json(mainData).then(data => {
+  const names = data.names;
+  const defaultID = data.names[0];
+  metaInfo(defaultID);
+  buildPlots(defaultID);
+})
 }
 //END page initialization option
+
 
 
 //Initialize page

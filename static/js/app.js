@@ -59,9 +59,7 @@ function buildPlots(testID) {
     })
     // set variables for chart axis 
     const chartXbar1 = subjectValues.slice(0, 10).reverse();
-    const chartYbar1 = subjectLabel.slice(0, 10);
-    // const chartXbar2 = subjectValues;
-    // const chartYbar2 = subjectLabel;
+    const chartYbar1 = subjectLabel.slice(0, 10).reverse();
     const bubbleXaxis = subjectValues;
     const bubbleYaxis = sampleOtuLabel;
     // const bubbleSize =(bubbleXaxis/5);
